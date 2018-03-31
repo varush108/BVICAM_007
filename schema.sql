@@ -38,7 +38,7 @@ CREATE TABLE `inspectors` (
   `Created_At` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Deleted_At` datetime DEFAULT NULL,
   `Updated_At` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 -- --------------------------------------------------------
 
@@ -52,7 +52,7 @@ CREATE TABLE `installation_checklist` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `deleted_At` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 -- --------------------------------------------------------
 
@@ -69,7 +69,7 @@ CREATE TABLE `ref_checklist` (
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `deleted_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 -- --------------------------------------------------------
 
@@ -84,7 +84,7 @@ CREATE TABLE `ref_no` (
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `deleted_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 -- --------------------------------------------------------
 
@@ -136,7 +136,7 @@ CREATE TABLE `request_questionnare` (
   `Created_At` datetime NOT NULL,
   `Deleted_At` datetime DEFAULT NULL,
   `Updated_At` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 -- --------------------------------------------------------
 
@@ -175,7 +175,7 @@ CREATE TABLE `user` (
   `Created_At` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Deleted_At` datetime DEFAULT NULL,
   `Updated_At` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 -- --------------------------------------------------------
 
@@ -191,7 +191,7 @@ CREATE TABLE `user_answers` (
   `Created_At` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Deleted_At` datetime DEFAULT NULL,
   `Updated_At` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 --
 -- Indexes for dumped tables
@@ -273,43 +273,43 @@ ALTER TABLE `user_answers`
 -- AUTO_INCREMENT for table `inspectors`
 --
 ALTER TABLE `inspectors`
-  MODIFY `ID` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(128) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `installation_checklist`
 --
 ALTER TABLE `installation_checklist`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `ref_checklist`
 --
 ALTER TABLE `ref_checklist`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `ref_no`
 --
 ALTER TABLE `ref_no`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `ref_no_msl`
 --
 ALTER TABLE `ref_no_msl`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `request_details`
 --
 ALTER TABLE `request_details`
-  MODIFY `ID` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `ID` int(128) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `request_questionnare`
 --
 ALTER TABLE `request_questionnare`
-  MODIFY `ID` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `ID` int(128) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `shortcomings`
@@ -321,45 +321,7 @@ ALTER TABLE `shortcomings`
 -- AUTO_INCREMENT for table `user_answers`
 --
 ALTER TABLE `user_answers`
-  MODIFY `ID` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=312;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `inspectors`
---
-ALTER TABLE `inspectors`
-  ADD CONSTRAINT `inspectors_ibfk_1` FOREIGN KEY (`User_Id`) REFERENCES `user` (`UID`);
-
---
--- Constraints for table `ref_checklist`
---
-ALTER TABLE `ref_checklist`
-  ADD CONSTRAINT `ref_checklist_ibfk_1` FOREIGN KEY (`ref_id`) REFERENCES `ref_no` (`id`),
-  ADD CONSTRAINT `ref_checklist_ibfk_2` FOREIGN KEY (`checklist_id`) REFERENCES `installation_checklist` (`id`);
-
---
--- Constraints for table `ref_no`
---
-ALTER TABLE `ref_no`
-  ADD CONSTRAINT `ref_no_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`UID`);
-
---
--- Constraints for table `request_details`
---
-ALTER TABLE `request_details`
-  ADD CONSTRAINT `request_details_ibfk_2` FOREIGN KEY (`inspector_allocated`) REFERENCES `user` (`UID`),
-  ADD CONSTRAINT `request_details_ibfk_3` FOREIGN KEY (`ref_id`) REFERENCES `ref_no` (`id`);
-
---
--- Constraints for table `user_answers`
---
-ALTER TABLE `user_answers`
-  ADD CONSTRAINT `user_answers_ibfk_1` FOREIGN KEY (`Question_Id`) REFERENCES `request_questionnare` (`ID`),
-  ADD CONSTRAINT `user_answers_ibfk_2` FOREIGN KEY (`Reference_Id`) REFERENCES `ref_no` (`id`);
-COMMIT;
+  MODIFY `ID` int(128) NOT NULL AUTO_INCREMENT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
