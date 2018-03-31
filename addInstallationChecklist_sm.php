@@ -1,4 +1,5 @@
 <?php
+$doi;
 $rid=$_GET["ref_no"];
 require_once 'config.php';
 		$sql = "SELECT id,name from installation_checklist";
@@ -210,12 +211,13 @@ require_once 'config.php';
                                         <select class="form-control" id="inspectorList" name="Inspector">
                                         <option disabled selected>CHOOSE AN INSPECTOR</option>
                                         <?php
-                                        	$sql = "SELECT user.UID,user.name from inspectors,user where user.UID = inspectors.user_id";
+                                        	$sql = "SELECT user.UID,user.name,user.created_at as doi from inspectors,user where user.UID = inspectors.user_id";
                                             if($stmt = $pdo->prepare($sql)){
                                                 if($stmt->execute())
                                                 {
                                                     while($row=$stmt->fetch())
                                                     {
+														$doi =$row["doi"];
                                                 
                                             
                                         ?>
@@ -230,13 +232,15 @@ require_once 'config.php';
                                     </div>
                                     <div class="form-group">
                                         <label>Select Date</label>
-                                        <select class="form-control" id="dateList" name="Inspector">
+                                        <select class="form-control" id="dateList" name="doi">
                                         <option disabled selected>CHOOSE AN INSPECTION DATE</option>
-                                        <option>10 April 2018</option>
-                                        <option>11 April 2018</option>
+                                        <option value="<?= $doi;?>">10 April 2018</option>
+                                        <option value="<?= $doi; ?>">11 April 2018</option>
+										<option value="<?= $doi;?>">13 April 2018</option>
+                                        <option value="<?= $doi; ?>">14 April 2018</option>
+                                        
                                         </select>
                                     </div>
-                                                    </form>
                                                     <div id="successMsg">
                                                         
                                                     </div>
@@ -244,6 +248,8 @@ require_once 'config.php';
                                                 <div class="modal-footer">
                                                 <?php printf('<a href= "#" onClick="handle(\'%s\');" class="btn btn-success btn-sm form-pill">ADD INSPECTOR</a> ', $rid);?>
 											</div>
+											                                                    </form>
+
                                                 
                                             </div>
                                         </div>
@@ -331,9 +337,12 @@ require_once 'config.php';
           
 			var mySelect = document.getElementById( "inspectorList" );
 		var ins=mySelect.options[ mySelect.selectedIndex ].value;
+		var mySelect1 = document.getElementById( "dateList" );
+		var doi=mySelect1.options[ mySelect1.selectedIndex ].value;
 		console.log("ins : "+ins);
-        	$.post("services/updateAllocatedInspector.php",{rid : rid, ins : ins}, function(data) {
-
+		console.log("doi = "+doi);
+        	$.post("services/updateAllocatedInspector.php",{rid : rid, ins : ins, doi : doi}, function(data) {
+					console.log(data);
 					 if(data==1)
 					 {
 						 

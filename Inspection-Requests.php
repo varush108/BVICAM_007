@@ -222,7 +222,7 @@ require_once 'config.php';
 		
 	}
 	
-	function handle(rid)
+	function accept(rid)
     {
        // var rid =$('#rid').val();
           

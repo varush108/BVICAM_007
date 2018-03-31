@@ -121,18 +121,15 @@ require_once 'config.php';
                             </div>
                         </div>
                         <div class="card-body">
-						<form enctype="multipart/form-data" action="upload.php" method="post">
-						<div class="input-group mb-3">
+						
+					<div class="input-group mb-3">
 										<div class="custom-file">
-										<label class="custom-file-label" for="inputGroupFile03"><?= $lab["l003"]; ?></label>
-											<input type="file"  id="image"  name="image"></input>
-											
+											<input type="file" class="custom-file-input" id="inputGroupFile03">
+											<label class="custom-file-label" for="inputGroupFile03">Upload your Photo</label>
 										</div>
-										
-									</div>
-									<div id="loader" class="loader row center"></div>
+									</div>				<div id="loader" class="loader row center"></div>
 									<button type="submit" class="btn btn-success"><?= $lab["l004"]; ?></button>
-						</form>
+						
 						<form name="requestForm" id="requestForm" action="services/submitRequest.php" method="post">
 
                                     <div class="form-group">
