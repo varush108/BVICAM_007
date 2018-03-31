@@ -92,13 +92,13 @@ $label=[
                             
                             
                             ?>
-                                <small> भाषा बदलें: <a href="/switch.php?ln=hi">हिंदी </a></small>
+                                <small> भाषा बदलें: <a href="switch.php?ln=hi">हिंदी </a></small>
                                 <?php
                         }
                         else{
             
                                 ?>
-                                <small> Change Language: <a href="/switch.php?ln=en">English</a></small>
+                                <small> Change Language: <a href="switch.php?ln=en">English</a></small>
                                 <?php
                         }
                         ?>
