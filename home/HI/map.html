@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset='utf-8'>
+		<!-- Title -->
+	    <title>दिल्ली फायर सर्विसेज</title>
+	    <!-- Meta content -->
+	    <meta content='Project' name='description'>
+	    <meta content='Hope Charity' name='keywords'>
+	    <meta content='width=device-width, initial-scale=1' name='viewport'>
+        <!-- Favicon -->
+         <link rel='shortcut icon' href='favicon.png' type='image/png'/>
+	    <!-- Google Fonts -->
+	    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet"> 
+	    <!-- Style Sheets -->
+	    <link href='css/bootstrap.min.css' rel='stylesheet'>
+	    <link href='css/font-awesome-4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+	    <link href='css/animate.css' rel='stylesheet'>
+	    <link href='css/jquery.bxslider.css' rel='stylesheet'>
+	    <link href='css/owl.carousel.min.css' rel='stylesheet'>
+	    <link href='css/template.css' rel='stylesheet'>
+
+	</head>
+	<body>
+		<!-- Top Header Section -->
+		<section id="header">
+			<div class="container">
+				<div id="logo" class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+					<a href="index.html"><img src="images/mainlogo.png" alt="Logo"/></a>
+				</div>
+				<div class="col-lg-9 col-md-8 col-sm-8 col-xs-6 top-navigation">
+					<div class="navbar-header">
+		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mobilemenu">
+		                    <span class="sr-only"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                </button>
+                    </div>
+                    <div class="collapse navbar-collapse yamm">
+		                <ul class="nav navbar-nav">
+			                <li>
+			                    <a href="#about">हमारे बारे में</a>
+			                </li>
+			                <li>
+			                    <a href="#actandrules">नियम और अधिनियम</a>
+			                </li>
+			                <li>
+			                    <a href="#rti">सूचना का अधिकार</a>
+			                </li>
+			                <li>
+			                    <a href="#contacts">हमसे संपर्क करें</a>
+			                </li>
+			                <li>
+			                    <a href="map.html">हमारी पहुंच</a>
+			                </li>
+			                <li class="highlighted">
+			                    <a href="../login.php" data-toggle="modal" >साइन इन/अप करें</a>
+			                </li>
+		                </ul>
+                    </div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="collapse" id="mobilemenu">
+						<ul class="nav mobile-nav">
+			                <li>
+			                    <a href="#about">हमारे बारे में</a>
+			                </li>
+			                <li>
+			                    <a href="#actandrules">नियम और अधिनियम</a>
+			                </li>
+			                <li>
+			                    <a href="#rti">सूचना का अधिकार</a>
+			                </li>
+			                <li>
+			                    <a href="#contacts">हमसे संपर्क करें</a>
+			                </li>
+			                <li>
+			                    <a href="map.html">हमारी पहुंच</a>
+			                </li>
+			                <li class="highlighted">
+			                    <a href="../login.php" data-toggle="modal" >साइन इन/अप करें</a>
+			                </li>
+		                </ul>
+		            </div>
+				</div>
+			</div>
+		</section>
+		
+	
+		<section id="contacts" class="colored">
+			<div class="container">
+				<div class="section-title">
+					<h2 class="dark-bg">हमारे संपर्</h2>
+				</div>
+				<div class="section-body">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 centered contact-details">
+						<div class="social-icons">
+						    <h2 class="dark-bg">हमारी शाखाएं</h2>
+				        </div>
+				    </div>
+				    <div class="row">
+					    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<!-- Google Maps -->
+					    	<div id="map_canvas"></div>
+							<!-- End Google Map -->
+							
+					    </div>
+					    
+				    </div>
+				</div>
+			</div>
+		</section>
+		<!-- End Our Contacts Section -->
+
+		<!-- Footer Section -->
+		<section id="footer" class="dark">
+			<div class="container">
+				<p>&#64; BVICAM_007 2018</p>
+				<p>Change Language: &emsp; <a href="../">English</a>
+			</div>
+			<a href="#" class="scrollToTop"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></a>
+		</section>
+        <!-- End Footer Section -->
+
+        <!-- Start Donate Modal  -->
+		
+		<!-- End Donate Modal -->
+
+		<!-- Page Preloading -->
+		<div id="preloadpage">
+            <div class="loadingwrap">
+				<div class="loading">
+					<div class="object object1"></div>
+					<div class="object object2"></div>
+					<div class="object object3"></div>
+					<div class="object object4"></div>
+				</div>
+            </div>
+		</div>
+		<!-- End Page Preloading -->
+
+        <!-- BEGIN SCRIPTS -->
+        
+		<script 
+		    src="https://maps.googleapis.com/maps/api/js">
+		</script>
+        <script>
+							    var locations = [
+    ['Janakpuri', 'Janakpuri, Delhi', 'https://www.google.co.in/maps/place/Janakpuri+West/@28.6297595,77.0779453,17z/data=!4m13!1m7!3m6!1s0x390d04ba6b064d0f:0xf609cdf712fe603e!2sJanakpuri,+New+Delhi,+Delhi!3b1!8m2!3d28.621899!4d77.0878385!3m4!1s0x390d04c0f345e9d9:0xac5f3d421621937b!8m2!3d28.6294091!4d77.077762'],
+    ['Dwarka', 'Dwarka, Delhi', 'https://www.google.co.in/maps/place/Dwarka/@28.6133097,77.0219529,15z/data=!4m13!1m7!3m6!1s0x390d1a9c31eec4e1:0x39493976cba4c89a!2sDwarka,+New+Delhi,+Delhi!3b1!8m2!3d28.5921401!4d77.0460481!3m4!1s0x390d054fe882d2e9:0x8aa7a279d7f36e9b!8m2!3d28.6149523!4d77.022711'],
+    ['Paschim Vihar', 'Paschim Vihar, Delhi', 'https://www.google.co.in/maps/place/Paschim+Vihar+East/@28.6752623,77.107117,16z/data=!4m13!1m7!3m6!1s0x390d04ba6b064d0f:0xf609cdf712fe603e!2sJanakpuri,+New+Delhi,+Delhi!3b1!8m2!3d28.621899!4d77.0878385!3m4!1s0x390d038dc3919f2f:0xbf62ad7bc5250ac6!8m2!3d28.6773259!4d77.1123183']
+];
+
+var geocoder;
+var map;
+var bounds = new google.maps.LatLngBounds();
+
+function initialize() {
+    map = new google.maps.Map(
+    document.getElementById("map_canvas"), {
+        center: new google.maps.LatLng(28.6249032, 77.1378986),
+        zoom: 13,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    geocoder = new google.maps.Geocoder();
+
+    for (i = 0; i < locations.length; i++) {
+
+
+        geocodeAddress(locations, i);
+    }
+}
+google.maps.event.addDomListener(window, "load", initialize);
+
+function geocodeAddress(locations, i) {
+    var title = locations[i][0];
+    var address = locations[i][1];
+    var url = locations[i][2];
+    geocoder.geocode({
+        'address': locations[i][1]
+    },
+
+    function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            var marker = new google.maps.Marker({
+                icon: 'http://maps.google.com/mapfiles/ms/icons/green.png',
+                map: map,
+                position: results[0].geometry.location,
+                title: title,
+                animation: google.maps.Animation.DROP,
+                address: address,
+                url: url
+            })
+            infoWindow(marker, map, title, address, url);
+            bounds.extend(marker.getPosition());
+            map.fitBounds(bounds);
+        } else {
+            alert("geocode of " + address + " failed:" + status);
+        }
+    });
+}
+
+function infoWindow(marker, map, title, address, url) {
+    google.maps.event.addListener(marker, 'click', function () {
+        var html = "<div><h3>" + title + "</h3><p>" + address + "<br></div><a href='" + url + "'>View location</a></p></div>";
+        iw = new google.maps.InfoWindow({
+            content: html,
+            maxWidth: 350
+        });
+        iw.open(map, marker);
+    });
+}
+							</script>
+        <script src="js/jquery-1.12.4.min.js"></script>  
+		<script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.bxslider.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.form-validator.min.js"></script>
+        <script src="js/scrollreveal.min.js"></script>
+        <script src="js/script.js"></script>
+
+
+        <!-- END SCRIPTS -->
+	</body>
+</html>
+

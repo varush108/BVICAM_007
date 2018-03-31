@@ -1,0 +1,33 @@
+[
+    {
+        "name": "sendotp/sendotp",
+        "version": "1.1",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/MSG91/sendotp-php.git",
+            "reference": "bd171fe43332c384a7ca9058b871ebc1a7be75c1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/MSG91/sendotp-php/zipball/bd171fe43332c384a7ca9058b871ebc1a7be75c1",
+            "reference": "bd171fe43332c384a7ca9058b871ebc1a7be75c1",
+            "shasum": ""
+        },
+        "time": "2017-08-04T12:31:20+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "sendotp\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Rahul Chordiya",
+                "email": "rahul@walkover.in"
+            }
+        ]
+    }
+]

@@ -1,0 +1,36 @@
+[25-Mar-2018 07:19:43 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/lzml8dgk/public_html/generatePDF/index.php on line 14
+[25-Mar-2018 07:19:43 UTC] PHP Fatal error:  Uncaught Exception: FPDF error: Some data has already been output, can't send PDF file in /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php:271
+Stack trace:
+#0 /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/lzml8dgk/public_html/generatePDF/index.php(23): FPDF->Output()
+#3 {main}
+  thrown in /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php on line 271
+[29-Mar-2018 04:49:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/lzml8dgk/public_html/generatePDF/index.php on line 18
+[29-Mar-2018 04:49:34 UTC] PHP Fatal error:  Uncaught Exception: FPDF error: Some data has already been output, can't send PDF file in /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php:271
+Stack trace:
+#0 /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/lzml8dgk/public_html/generatePDF/index.php(23): FPDF->Output()
+#3 {main}
+  thrown in /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php on line 271
+[29-Mar-2018 04:50:36 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/lzml8dgk/public_html/generatePDF/index.php on line 14
+[29-Mar-2018 04:50:36 UTC] PHP Fatal error:  Uncaught Exception: FPDF error: Some data has already been output, can't send PDF file in /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php:271
+Stack trace:
+#0 /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/lzml8dgk/public_html/generatePDF/index.php(19): FPDF->Output()
+#3 {main}
+  thrown in /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php on line 271
+[29-Mar-2018 05:20:06 UTC] PHP Warning:  A non-numeric value encountered in /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php on line 861
+[29-Mar-2018 05:20:06 UTC] PHP Fatal error:  Uncaught Exception: FPDF error: Some data has already been output, can't send PDF file in /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php:271
+Stack trace:
+#0 /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php(1063): FPDF->Error('Some data has a...')
+#1 /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php(999): FPDF->_checkoutput()
+#2 /home/lzml8dgk/public_html/generatePDF/index.php(18): FPDF->Output()
+#3 {main}
+  thrown in /home/lzml8dgk/public_html/generatePDF/fpdf/fpdf.php on line 271
+[29-Mar-2018 05:22:19 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/lzml8dgk/public_html/generatePDF/index.php on line 17
+[29-Mar-2018 05:22:20 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/lzml8dgk/public_html/generatePDF/index.php on line 17
+[29-Mar-2018 05:22:44 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/lzml8dgk/public_html/generatePDF/index.php on line 18
+[30-Mar-2018 04:55:40 UTC] PHP Parse error:  Invalid numeric literal in /home/lzml8dgk/public_html/generatePDF/index.php on line 17

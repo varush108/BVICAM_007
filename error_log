@@ -1,0 +1,50 @@
+[24-Mar-2018 04:47:50 UTC] PHP Warning:  include(footerphp): failed to open stream: No such file or directory in /home/lzml8dgk/public_html/addInstallationChecklist_sm.php on line 787
+[24-Mar-2018 04:47:50 UTC] PHP Warning:  include(footerphp): failed to open stream: No such file or directory in /home/lzml8dgk/public_html/addInstallationChecklist_sm.php on line 787
+[24-Mar-2018 04:47:50 UTC] PHP Warning:  include(): Failed opening 'footerphp' for inclusion (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/lzml8dgk/public_html/addInstallationChecklist_sm.php on line 787
+[24-Mar-2018 04:48:16 UTC] PHP Warning:  include(footerphp): failed to open stream: No such file or directory in /home/lzml8dgk/public_html/addInstallationChecklist_sm.php on line 787
+[24-Mar-2018 04:48:16 UTC] PHP Warning:  include(footerphp): failed to open stream: No such file or directory in /home/lzml8dgk/public_html/addInstallationChecklist_sm.php on line 787
+[24-Mar-2018 04:48:16 UTC] PHP Warning:  include(): Failed opening 'footerphp' for inclusion (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/lzml8dgk/public_html/addInstallationChecklist_sm.php on line 787
+[24-Mar-2018 04:48:16 UTC] PHP Warning:  include(footerphp): failed to open stream: No such file or directory in /home/lzml8dgk/public_html/addInstallationChecklist_sm.php on line 787
+[24-Mar-2018 04:48:16 UTC] PHP Warning:  include(footerphp): failed to open stream: No such file or directory in /home/lzml8dgk/public_html/addInstallationChecklist_sm.php on line 787
+[24-Mar-2018 04:48:16 UTC] PHP Warning:  include(): Failed opening 'footerphp' for inclusion (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/lzml8dgk/public_html/addInstallationChecklist_sm.php on line 787
+[24-Mar-2018 06:45:17 UTC] PHP Parse error:  syntax error, unexpected 'utf' (T_STRING) in /home/lzml8dgk/public_html/View-Status.php on line 14
+[25-Mar-2018 09:35:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ref_no.id' in 'where clause' in /home/lzml8dgk/public_html/View-Status.php:110
+Stack trace:
+#0 /home/lzml8dgk/public_html/View-Status.php(110): PDOStatement->execute()
+#1 {main}
+  thrown in /home/lzml8dgk/public_html/View-Status.php on line 110
+[26-Mar-2018 06:00:07 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/lzml8dgk/public_html/handleRequests_sm.php on line 129
+[26-Mar-2018 06:00:12 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/lzml8dgk/public_html/handleRequests_sm.php on line 129
+[26-Mar-2018 06:44:11 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/lzml8dgk/public_html/handleRequests_sm.php on line 129
+[27-Mar-2018 12:20:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home/lzml8dgk/public_html/Inspection-Form.php:12
+Stack trace:
+#0 /home/lzml8dgk/public_html/Inspection-Form.php(12): PDOStatement->execute()
+#1 {main}
+  thrown in /home/lzml8dgk/public_html/Inspection-Form.php on line 12
+[27-Mar-2018 12:20:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home/lzml8dgk/public_html/Inspection-Form.php:12
+Stack trace:
+#0 /home/lzml8dgk/public_html/Inspection-Form.php(12): PDOStatement->execute()
+#1 {main}
+  thrown in /home/lzml8dgk/public_html/Inspection-Form.php on line 12
+[27-Mar-2018 12:20:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home/lzml8dgk/public_html/Inspection-Form.php:12
+Stack trace:
+#0 /home/lzml8dgk/public_html/Inspection-Form.php(12): PDOStatement->execute()
+#1 {main}
+  thrown in /home/lzml8dgk/public_html/Inspection-Form.php on line 12
+[27-Mar-2018 18:35:05 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/lzml8dgk/public_html/header.php on line 5
+[28-Mar-2018 15:42:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'request_details.create_at' in 'field list' in /home/lzml8dgk/public_html/Inspection-Requests.php:112
+Stack trace:
+#0 /home/lzml8dgk/public_html/Inspection-Requests.php(112): PDOStatement->execute()
+#1 {main}
+  thrown in /home/lzml8dgk/public_html/Inspection-Requests.php on line 112
+[28-Mar-2018 22:57:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home/lzml8dgk/public_html/Inspection-Form.php:12
+Stack trace:
+#0 /home/lzml8dgk/public_html/Inspection-Form.php(12): PDOStatement->execute()
+#1 {main}
+  thrown in /home/lzml8dgk/public_html/Inspection-Form.php on line 12
+[30-Mar-2018 09:27:38 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/lzml8dgk/public_html/Request-Form.php on line 135
+[30-Mar-2018 19:52:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home/lzml8dgk/public_html/Inspection-Form.php:12
+Stack trace:
+#0 /home/lzml8dgk/public_html/Inspection-Form.php(12): PDOStatement->execute()
+#1 {main}
+  thrown in /home/lzml8dgk/public_html/Inspection-Form.php on line 12

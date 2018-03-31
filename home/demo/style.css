@@ -1,0 +1,4 @@
+html, body, #map_canvas {
+    height: 370px;
+    width: 100%;
+}
