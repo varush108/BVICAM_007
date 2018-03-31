@@ -5,14 +5,11 @@
 session_start();
 $rid=$_GET["rid"];
 require_once 'config.php';
-	$sql="SELECT installation_checklist.name,ref_checklist.id from installation_checklist,ref_checklist where installation_checklist.id=ref_checklist.checklist_id AND ref_checklist.ref_id=".$rid;
-	
-	if($stmt = $pdo->prepare($sql))
-	{
-		if($stmt->execute())
-		{
-	
-?>
+    $sql="SELECT installation_checklist.name,ref_checklist.id from installation_checklist,ref_checklist where installation_checklist.id=ref_checklist.checklist_id AND ref_checklist.ref_id=".$rid;
+    
+    if ($stmt = $pdo->prepare($sql)) {
+        if ($stmt->execute()) {
+            ?>
 
 
 <head>
@@ -98,34 +95,34 @@ require_once 'config.php';
                                 </div>
                                 <div class="card-body">
 								<form name="inspectionForm" id="inspectionForm" method="post" action="response.php">
-								<?php $total = $stmt->rowCount();?>
+								<?php $total = $stmt->rowCount(); ?>
 								<input type="hidden" name="count" value="<?= $total; ?>" > </input>
 								<ul>
                                     <?php	$count=0;
-											while($row=$stmt->fetch())
-											{
-												$count++;
-									?>
-									<input type="hidden" name="question<?= $count; ?>" value="<?= $row['id']; ?>" > </input>
-                                    <li><div class="form-group">
+            while ($row=$stmt->fetch()) {
+                $count++; ?>
+                                    <li class="question-li">
+                                            <input type="hidden" name="question<?= $count; ?>" value="<?= $row['id']; ?>" class="question-number"> </input>
+                                        <div class="form-group">
                                         <label><strong><?= $row["name"] ?></strong></label>
-											<select class="form-control " name="answer<?= $count; ?>" id="checklist" required>
-												
+                                        <div class="input-group mb-3">
+                                <select class="form-control checklist" name="answer<?= $count; ?>" id="checklist" required>
 												<option selected value="yes">Installed</option>
 												<option value="no">Not Installed</option>
-											</select>											
+                                            </select>
+                                            <input type="hidden" name="image<?= $count; ?>" data-count="<?= $count; ?>">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary open-image-selector" type="button" data-count="<?= $count; ?>">Attach Photo</button>
+                                </div>
+                            </div>
 									    </div>
-                                    <div class="form-group">
-                                        <label>Capture</label>
-                                        <input type="file" name="image<?= $count; ?>" accept="image/*">
-                                    </div>
+                                    <img src="" class="preview-image" data-count="<?= $count ?>" style="max-width: 200px;">
 									</li>
 									<?php 
-											}
-		}
-		
-	}
-	?>
+            }
+        }
+    }
+    ?>
 					
 									<div class="form-group">
 							       <input type="checkbox" name="shortcomingBox" id="shortcomingBox" onchange="valueChanged();" class="iCheck-flat" >
@@ -146,18 +143,30 @@ require_once 'config.php';
 										</div>
 									</div>
                                     <div class="form-group">
-											<button type="submit" class="btn btn-success">Accepted</button>
+											<button type="submit" class="btn btn-success">Submit</button>
                                     </div>
-									</form>
+                                    </form>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="image-selector" class="collapse" style="text-align: center;">
+                                        <select name="" id="videoSource"></select>
+                                        <br>
+                                        <div id="debug"></div>
+                                        <br>
+                                        <video id="video" autoplay></video>
+                                        <br>
+                                        <button id="snap">Snap Photo</button>
+                                        <br>
+                                        <canvas id="canvas" style="display: none;"></canvas>
+                                        <br>
+                                        <input type="hidden" id="count-state" value="0">
+                                    </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
 
         <!--footer-->
@@ -181,12 +190,35 @@ require_once 'config.php';
 
     <!--basic scripts initialization-->
     <script src="assets/js/scripts.min.js"></script>
+    <script src="assets/js/main.js"></script>    
 	<script>
 	
 	$(document).ready(function () {
-			$("#shortcomings").hide();	
-	
-	
+        $("#shortcomings").hide();
+        $('.checklist').on('change', function() {
+            if($(this).val() == 'no') {
+                $(this).parent().find('.open-image-selector').attr('disabled', true);
+            } else {
+                $(this).parent().find('.open-image-selector').attr('disabled', false);
+            }
+        });
+	    $('.open-image-selector').on('click', function() {
+            $('#image-selector').show();
+            $('#inspectionForm').hide();
+            $('#count-state').val($(this).data('count'));
+        });
+        $('#inspectionForm').on('submit', function(e) {
+            e.preventDefault();
+            var questions = [];
+            $('#inspectionForm .question-li').each(function(i, question) {
+                var temp = {};
+                temp.questionId = $(question).find('.question-number').val();
+                temp.answer = $(question).find('.checklist').val();
+                temp.image = $(question).find('.preview-image').attr('src');
+                questions.push(temp);
+            });
+            console.log(questions);
+        })
 	});
 	</script>
 	
